@@ -1,0 +1,134 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-size: 100%;
+}
+
+:root {
+    --font-weight-bold: 700;
+    --uppercase-font: uppercase;
+
+    --full-width: 100%;
+    --full-height: 100%;
+
+	--base-transition: all 0.5s ease;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 2em;
+    font-weight: 400;
+    font-size: 11pt;
+}
+
+nav {
+    position: absolute;
+    width: var(--full-width);
+    text-transform: var(--uppercase-font);
+    z-index: 3;
+}
+
+nav ul.row > h1 {
+    margin-right: auto;
+}
+
+nav ul.row > li > * {
+    margin-left: 3em;
+}
+
+h2 {
+    text-transform: var(--uppercase-font);
+    font-weight: var(--font-weight-bold);
+}
+
+#hero {
+	position: relative;
+	background: url("../assets/images/banner.jpg") center top / cover no-repeat fixed;
+	line-height: 1.75em;
+	padding: 10em 0 10em 0;
+	text-align: center;
+}
+
+#hero div.column::before {
+	content: '';
+    position: absolute;
+    top: 0;
+	height: var(--full-height);
+	width: var(--full-width);
+	background-color: rgba(38, 32, 43, 0.75);
+}
+
+#hero div.column > * {
+	z-index: 2;
+}
+
+#hero h2 {
+	line-height: 1.35em;
+	margin-bottom: 0.5em;
+}
+
+#hero p {
+    text-transform: var(--uppercase-font);
+    line-height: 1.7em;
+    margin-bottom: 1.75em;
+}
+
+button, .button {
+    display: block;
+    height: 3.15em;
+	font-size: 1.35em;    
+	line-height: 3.25em;
+    font-weight: var(--font-weight-bold);
+    border: 0;
+    cursor: pointer;
+    padding: 0 2.2em;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: var(--uppercase-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section, footer {
+    width: var(--full-width);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 6em 0 4em 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: var(--full-width);
+	max-height: var(--full-height);
+}
+
+.icon {
+    transition: var(--base-transition);
+}
+
+.icon:hover {
+    transition: var(--base-transition);
+}
